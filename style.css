@@ -3,6 +3,16 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.active {
+  background: #252525;
+  color: #F2F2F2;
+}
+
+#darkmode {
+  cursor: pointer;
+}
+
+
 img {
   width: 550px;
 }
@@ -33,6 +43,15 @@ p {
   padding: 10px;
   border-radius: 4px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.grid-imagens div.active {
+  background:  rgba(255, 255, 255, 0.1);
+}
+
+header.active, footer.active {
+  background:  rgba(255, 255, 255, 0.1);
+
 }
 
 .grid-imagens div p {
@@ -77,6 +96,13 @@ header p {
   font-weight: 700;
 }
 
+.titulo-principal:after{
+  content: '|';
+  margin-left: 5px;
+  opacity: 1;
+  animation: pisca .7s infinite;
+ }
+
 @media (max-width: 1160px) {
   .grid-imagens {
     justify-content: center;
@@ -100,5 +126,15 @@ header p {
     text-align: center;
     font-size: .875rem;
     font-weight: 400;
+  }
+}
+
+ 
+@keyframes pisca{
+  0%, 100%{
+      opacity: 1;
+  }
+  50%{
+      opacity: 0;
   }
 }
